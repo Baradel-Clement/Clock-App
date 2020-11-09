@@ -1,0 +1,137 @@
+.button {
+    width: 146px;
+    height: 56px;
+    @include flex(flex, row, space-between, center);
+    cursor: pointer;
+    position: relative;
+    z-index: 3;
+    background-color: white;
+    border-radius: 28px;
+    padding-left: 21px;
+    overflow: hidden;
+}
+
+.more, .less {
+    position: absolute;
+    z-index: 4;
+    left: 0px;
+    margin-left: 21px;
+    height: 28px;
+    @extend %transition-0-2s;
+    opacity: 1;
+}
+
+.more {
+    top: 14px;
+}
+
+.less {
+    bottom: -30px;
+    @extend %transition-0-2s;
+    opacity: 0;
+}
+
+.less.active {
+    bottom: 13px;
+    @extend %transition-0-2s;
+    opacity: 1;
+}
+
+.more.active {
+    top: -30px;
+    @extend %transition-0-2s;
+    opacity: 0;
+}
+
+#arrow {
+    margin-right: 9px;
+    position: absolute;
+    right: 0px;
+    @extend %transition-0-2s;
+    transform: rotate(180deg);
+}
+
+#arrow.active {
+    @extend %transition-0-2s;
+    transform: rotate(0deg);
+}
+
+#arrow-mobile {
+    display: none;
+}
+
+#arrow-mobile, #arrow-mobile.active {
+    @extend %transition-0-2s;
+}
+
+#circle-button {
+    @extend %transition-0-2s;
+}
+
+.button:hover > svg:nth-child(3) > g > circle {
+    fill: #999999 !important;
+    @extend %transition-0-2s;
+}
+
+.button-arrow::after {
+    content: '';
+    transform: rotate(180deg);
+    width: 24px;
+    height: 12px;
+    background-image: url(/assets/desktop/icon-arrow-up.svg);
+    background-size: 165%;
+    background-position: center;
+    @extend %transition-0-2s;
+}
+
+@media screen and (max-width: 768px) {
+    .button {
+        width: 115px;
+        height: 39px;
+        padding-left: 17px;
+    }
+
+    #arrow {
+        margin-right: 4px;
+        display: none;
+    }
+
+    #arrow-mobile {
+        margin-right: 4px;
+        position: absolute;
+        display: block;
+        right: 0px;
+    }
+
+    #arrow-mobile.active {
+        transform: rotate(0deg);
+    }
+
+    .button-arrow::after {
+        width: 19px;
+        height: 10px;
+    }
+    
+    .button > svg {
+        width: 32px;
+        height: 32px;
+    }
+
+    #arrow-mobile::after {
+        width: 19px;
+        height: 10px;
+        background-image: url(/assets/mobile/icon-arrow-up.svg);
+        background-size: 165%;
+        background-position: center;
+    }
+
+    .less {
+        bottom: -30px;
+        opacity: 0;
+    }
+    
+    .less.active {
+        bottom: -2px;
+        opacity: 1;
+    }
+}

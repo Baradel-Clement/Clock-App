@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/scripts/app.js"></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel='stylesheet' href="/style/style.css" />
+    <title>Clock-App</title>
+</head>
+<body onload="getApi(), landingPage()">
+    <div class="loading-page"><i class="fas fa-clock"></i></div>
+    <div class="background-image"><div class="bacgkround-image-opacity"></div></div>
+    <div class="default-display">
+        <div class="default-display-outer">
+            <div class="default-display-outer-left">
+                <div class="quotes">
+                    <p class="quote"></p>
+                    <p class="author bold"></p>
+                    <svg id="refresh" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M7.188 10.667a.208.208 0 01.147.355l-2.344 2.206a5.826 5.826 0 009.578-2.488l2.387.746A8.322 8.322 0 013.17 14.94l-2.149 2.022a.208.208 0 01-.355-.148v-6.148h6.52zm7.617-7.63L16.978.958a.208.208 0 01.355.146v6.23h-6.498a.208.208 0 01-.147-.356L13 4.765A5.825 5.825 0 003.43 7.26l-2.386-.746a8.32 8.32 0 0113.76-3.477z" fill="#FFF" fill-rule="nonzero" opacity=".5"/></svg>
+                </div>
+                <div class="main-content">
+                    <p class="M"><span id="sun-moon" class=""></span>GOOD <span class="M intro-sentence"></span><span class="evening M">, IT’S CURRENTLY</span></p>
+                    <p class="XXL hour"></p>
+                    <p class="location L"></p>
+                </div>
+            </div>
+            <div class="button">
+                <a class="more button-typography">MORE</a>
+                <a class="less button-typography">LESS</a>
+                <svg id="arrow" width="40" height="40" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#303030" cx="20" cy="20" r="20"/><path stroke="#FFF" stroke-width="2" d="M14 23l6-6 6 6"/></g></svg>
+                <svg id='arrow-mobile' width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="16" fill="#303030"/><path d="M11.2 13.6001L16 18.4001L20.8 13.6001" stroke="white" stroke-width="2"/></svg>
+            </div>
+        </div>
+    </div>
+    <div class="display-detail nighttime">
+        <div class="display-detail-wrap">
+            <div class="display-detail-wrap-left">
+                <div class="display-detail-wrap-one">
+                    <p class="XS">CURRENT TIMEZONE</p>
+                    <p id="timezone" class="XL"></p>
+                </div>
+                <div class="display-detail-wrap-one">
+                    <p class="XS">DAY OF THE YEAR</p>
+                    <p id="yearDay" class="XL"></p>
+                </div>
+            </div>
+            <div class="display-detail-wrap-right">
+                <div class="display-detail-wrap-one">
+                    <p class="XS">DAY OF THE WEEK</p>
+                    <p id="weekDay" class="XL"></p>
+                </div>
+                <div class="display-detail-wrap-one">
+                    <p class="XS">WEEK NUMBER</p>
+                    <p id="weekNumber" class="XL"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

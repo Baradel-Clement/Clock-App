@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    font-family: 'Inter';
+    font-weight: 400;
+    letter-spacing: 0px;
+    text-align: left;
+    color: white;
+}
+
+body {
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.XXL {
+    font-size: 200px;
+    font-weight: 700;
+    line-height: 200px;
+    letter-spacing: -5px;
+}
+
+.XL {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 68px;
+}
+
+.L {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 4.800000190734863px;
+}
+
+.M {
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 4px;
+}
+
+.S {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28px;
+}
+
+.XS {
+    font-size: 15px;
+    line-height: 28px;
+    letter-spacing: 3px;
+}
+
+.button-typography {
+    line-height: 28px;
+    font-size: 16px;
+    letter-spacing: 5px;
+    font-weight: 700;
+    color: black;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.time-zone {
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 28px;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.black {
+    color: $black;
+}
+
+@media screen and (max-width: 1200px) {
+    .XXL {
+        font-size: 175px;
+        line-height: 175px;
+        letter-spacing: -4.375px;
+    }
+
+    .L {
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 3.5999999046325684px;
+    }
+
+    .XL {
+        font-size: 40px;
+        line-height: 48px;
+    }
+
+    .XS {
+        font-size: 13px;
+        line-height: 28px;
+        letter-spacing: 2.6px;
+    }
+
+    .time-zone {
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 12px;
+        line-height: 22px;
+    }
+
+    .XXL {
+        font-size: 100px;
+        line-height: 100px;
+        letter-spacing: -2.5px;
+    }
+    .XL {
+        font-size: 20px;
+        line-height: 24,2px;
+    }
+
+    .M {
+        font-size: 15px;
+        line-height: 25px;
+        letter-spacing: 3px;
+    }
+
+    .L {
+        font-size: 15px;
+        line-height: 28px;
+        letter-spacing: 3px;
+    }
+    .XS {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .time-zone {
+        font-size: 15px;
+    }
+
+    .button-typography {
+        line-height: 14px;
+        font-size: 12px;
+        letter-spacing: 3.75px;
+    }
+}

@@ -1,0 +1,120 @@
+.display-detail {
+    width: 100%;
+    height: 400px;
+    @include flex(flex, row, flex-start, center);
+    z-index: 3;
+    padding-left: 165px;
+    @extend %transition-0-2s;
+}
+
+.display-detail.daytime {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(40.7742px);
+}
+
+.display-detail.nighttime {
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(40.7742px);
+}
+
+.display-detail.daytime > .display-detail-wrap > .display-detail-wrap-left > .display-detail-wrap-one > p, 
+.display-detail.daytime > .display-detail-wrap > .display-detail-wrap-right > .display-detail-wrap-one > p {
+    color: $black;
+}
+
+.display-detail.nighttime > .display-detail-wrap > .display-detail-wrap-left > .display-detail-wrap-one > p, 
+.display-detail.nighttime > .display-detail-wrap > .display-detail-wrap-right > .display-detail-wrap-one > p {
+    color: white;
+}
+
+.display-detail.active {
+    transform: translateY(-400px);
+    @extend %transition-0-2s;
+}
+
+.display-detail-wrap {
+    width: 844px;
+    height: 252px;
+    @include flex(flex, row, space-between, center);
+}
+
+.display-detail-wrap-left, .display-detail-wrap-right {
+    height: 252px;
+    @include flex(flex, column, space-between, flex-start);
+    position: relative;
+}
+
+.display-detail-wrap-left {
+    width: 571px;
+}
+
+.display-detail-wrap-left::after {
+    content: '';
+    width: 1px;
+    height: 252px;
+    @include absolute-el(unset, 0px, unset, unset);
+    background-color: $black;
+    opacity: 0.25;
+}
+
+@media screen and (max-width: 1200px) {
+    .display-detail {
+        width: 100%;
+        height: 440px;
+        padding-left: 64px;
+    }
+    
+    .display-detail.active {
+        transform: translateY(-440px);
+    }
+    
+    .display-detail-wrap {
+        width: 536px;
+        height: 202px;
+    }
+    
+    .display-detail-wrap-left, .display-detail-wrap-right {
+        height: 202px;
+    }
+    
+    .display-detail-wrap-left {
+        width: 303px;
+    }
+
+    .display-detail-wrap-right {
+        width: 157px;
+    }
+    
+    .display-detail-wrap-left::after {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .display-detail {
+        height: 256px;
+        padding: 48px 26px;
+    }
+    
+    .display-detail.active {
+        transform: translateY(-256px);
+    }
+    
+    .display-detail-wrap {
+        width: 323px;
+        height: 160px;
+        @include flex(flex, column, space-between, center);
+    }
+    
+    .display-detail-wrap-left, .display-detail-wrap-right {
+        width: 323px;
+        height: 72px;
+        @include flex(flex, column, space-between, flex-start);
+    }
+
+    .display-detail-wrap-one {
+        @include flex(flex, row, space-between, center);
+        width: 323px;
+        height: 28px;
+    }
+}

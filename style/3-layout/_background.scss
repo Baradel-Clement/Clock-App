@@ -1,0 +1,48 @@
+.background-image {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 0;
+}
+
+.bacgkround-image-opacity {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.23);
+    z-index: 1;
+}
+
+.background-image.daytime {
+    background-image: url(/assets/desktop/bg-image-daytime.jpg);
+    background-position: center;
+}
+
+.background-image.nighttime {
+    background-image: url(/assets/desktop/bg-image-nighttime.jpg);
+    background-position: bottom;
+}
+
+@media screen and (max-width: 1200px) {
+    .background-image.daytime {
+        background-image: url(/assets/tablet/bg-image-daytime.jpg);
+    }
+    
+    .background-image.nighttime {
+        background-image: url(/assets/tablet/bg-image-nighttime.jpg);
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+    .background-image.daytime {
+        background-image: url(/assets/mobile/bg-image-daytime.jpg);
+    }
+    
+    .background-image.nighttime {
+        background-image: url(/assets/mobile/bg-image-nighttime.jpg);
+    }
+    
+}
