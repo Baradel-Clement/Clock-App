@@ -72,7 +72,7 @@ function getApi() {
     //URL APIS
     var urlQuotes = 'https://programming-quotes-api.herokuapp.com/quotes/random/lang/en'
     var urlFreeGoIp = 'https://freegeoip.app/json/';
-    var urlWorldTimeApi = 'http://worldtimeapi.org/api/ip';
+    var urlWorldTimeApi = 'https://worldtimeapi.org/api/ip';
 
     //CALL API
     $.get(urlQuotes, quotesFunction).done(function () {
